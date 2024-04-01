@@ -21,7 +21,7 @@ export class Dydx implements ExchangeClient {
     return 'Bybit'
   }
 
-  public async totalAssets (): Promise<{ totalValue: number }> {
+  public async totalAssets (): Promise<number> {
     const bybitBalance = await this.client.privateGetV5AccountWalletBalance({
       accountType: 'UNIFIED'
     })
